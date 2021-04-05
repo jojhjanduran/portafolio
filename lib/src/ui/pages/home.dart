@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:portafolio/src/bloc/main_bloc.dart';
 import 'package:portafolio/src/utils/values/content_info.dart';
 
 class Home extends StatelessWidget {
+  MainBloc bloc;
   @override
   Widget build(BuildContext context) {
+    bloc = BlocProvider.of<MainBloc>(context);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 50),
@@ -46,8 +50,8 @@ class Home extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          width: 200,
-          height: 300,
+          width: bloc.responsiveApp.containerWidth,
+          height: bloc.responsiveApp.containerHeight,
           decoration: BoxDecoration(
               border: Border.all(color: Colors.white),
               color: Colors.transparent),
@@ -57,8 +61,8 @@ class Home extends StatelessWidget {
           top: -30,
           left: 30,
           child: Container(
-            width: 200,
-            height: 300,
+            width: bloc.responsiveApp.containerWidth,
+            height: bloc.responsiveApp.containerHeight,
             color: Colors.grey,
           ),
         ),

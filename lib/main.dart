@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:portafolio/src/bloc/main_bloc.dart';
 import 'package:portafolio/src/utils/values/responsive.dart';
 import 'package:portafolio/src/utils/values/theme_app.dart';
 
@@ -11,17 +13,23 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   Responsive responsiveApp;
+  MainBloc bloc;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'My portfolio',
-      debugShowCheckedModeBanner: false,
-      builder: (context, child) {
-        responsiveApp = Responsive(context);
-        return Theme(
-            data: ThemeApp(responsiveApp).themeApp, child: MyPortfolio());
-      },
+    return BlocProvider(
+      child: MaterialApp(
+        title: 'My portfolio',
+        debugShowCheckedModeBanner: false,
+        builder: (context, child) {
+          bloc = BlocProvider.of<MainBloc>(context);
+          bloc.setResponsiveApp(Responsive(context));
+          return Theme(
+              data: ThemeApp(bloc.responsiveApp).themeApp,
+              child: MyPortfolio());
+        },
+      ),
+      bloc: MainBloc(),
     );
   }
 }

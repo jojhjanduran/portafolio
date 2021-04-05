@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portafolio/src/utils/values/responsive.dart';
 import 'package:portafolio/src/utils/values/theme_app.dart';
 
+import 'src/ui/pages/home.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -24,14 +26,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyPortfolio extends StatelessWidget {
+class MyPortfolio extends StatefulWidget {
+  @override
+  _MyPortfolioState createState() => _MyPortfolioState();
+}
+
+class _MyPortfolioState extends State<MyPortfolio> {
+  int indexPage = 0;
+  List<Widget> pages = [Home()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
-      body: Center(
-        child: Text('hola mundo', style: Theme.of(context).textTheme.bodyText1),
-      ),
-    );
+        backgroundColor: Theme.of(context).backgroundColor,
+        body: pages[indexPage]);
   }
 }

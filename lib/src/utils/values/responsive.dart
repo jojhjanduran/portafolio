@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portafolio/src/utils/values/edgeInsects.dart';
+import 'package:portafolio/src/utils/values/edge_insects.dart';
 import '../responsive_size.dart';
 
 class Responsive {
@@ -25,6 +25,10 @@ class Responsive {
   get _scaleWidth => (width * _scaleFactor) / width;
   get _scaleHeight => (height * _scaleFactor) / height;
 
+  //Text Size
+  get bodyText1 => setFontSize(12);
+
   setWidth(int width) => width * _scaleWidth;
   setHeight(int height) => height * _scaleHeight;
+  setFontSize(int fontSize) => setWidth(fontSize) * _textScaleFactor;
 }

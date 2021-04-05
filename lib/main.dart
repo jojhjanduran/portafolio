@@ -37,6 +37,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         backgroundColor: Theme.of(context).backgroundColor,
         body: pages[indexPage]);
   }

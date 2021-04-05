@@ -8,9 +8,20 @@ class ThemeApp {
 
   Color get _mainBackgroundColor => Colors.black;
   Color get _mainTextColor => Colors.white;
+  Color get _secundaryTextColor => Colors.grey;
   ThemeData get themeApp => ThemeData(
-      backgroundColor: _mainBackgroundColor,
-      textTheme: TextTheme(
-          bodyText1: TextStyle(
-              color: _mainTextColor, fontSize: _responsiveApp.bodyText1)));
+      backgroundColor: _mainBackgroundColor, textTheme: getTextTheme());
+
+  getTextTheme() {
+    return TextTheme(
+      headline1:
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.headline1),
+      headline2: TextStyle(
+          color: _secundaryTextColor, fontSize: _responsiveApp.headline2),
+      bodyText1:
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
+      bodyText2:
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
+    );
+  }
 }

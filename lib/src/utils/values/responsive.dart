@@ -30,6 +30,10 @@ class Responsive {
   get headline2 => setFontSize(20);
   get bodyText1 => setFontSize(12);
 
+  //profileImage
+  get containerWidth => setWidth(200);
+  get containerHeight => setHeight(300);
+
   setWidth(int width) => width * _scaleWidth;
   setHeight(int height) => height * _scaleHeight;
   setFontSize(int fontSize) => setWidth(fontSize) * _textScaleFactor;

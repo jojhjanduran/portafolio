@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio/src/utils/values/edgeInsects.dart';
 import '../responsive_size.dart';
 
 class Responsive {
@@ -6,6 +7,7 @@ class Responsive {
   MediaQueryData _mediaQueryData;
   double _textScaleFactor;
   double _scaleFactor;
+  EdgeInsectsApp edgeInsetsApp;
 
   Responsive(this._context) {
     _mediaQueryData = MediaQuery.of(_context);
@@ -15,6 +17,7 @@ class Responsive {
         : isTablet(_context)
             ? 1.1
             : 1.3;
+    edgeInsetsApp = EdgeInsectsApp(this);
   }
 
   get width => _mediaQueryData.size.width;

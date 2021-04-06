@@ -6,7 +6,7 @@ class ThemeApp {
 
   ThemeApp(this._responsiveApp);
 
-  Color get _mainBackgroundColor => Colors.black;
+  Color get _mainBackgroundColor => Colors.grey[900];
   Color get _mainTextColor => Colors.white;
   Color get _secundaryTextColor => Colors.grey;
   ThemeData get themeApp => ThemeData(
@@ -18,6 +18,8 @@ class ThemeApp {
           TextStyle(color: _mainTextColor, fontSize: _responsiveApp.headline1),
       headline2: TextStyle(
           color: _secundaryTextColor, fontSize: _responsiveApp.headline2),
+      headline3:
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.headline3),
       bodyText1:
           TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
       bodyText2:

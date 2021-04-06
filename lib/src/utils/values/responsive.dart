@@ -26,8 +26,9 @@ class Responsive {
   get _scaleHeight => (height * _scaleFactor) / height;
 
   //Text Size
-  get headline1 => setFontSize(30);
+  get headline1 => setFontSize(25);
   get headline2 => setFontSize(20);
+  get headline3 => setFontSize(20);
   get bodyText1 => setFontSize(12);
 
   //profileImage

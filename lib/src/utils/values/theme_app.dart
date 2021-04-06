@@ -20,6 +20,8 @@ class ThemeApp {
           color: _secundaryTextColor, fontSize: _responsiveApp.headline2),
       headline3:
           TextStyle(color: _mainTextColor, fontSize: _responsiveApp.headline3),
+      headline4:
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.headline4),
       bodyText1:
           TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
       bodyText2:

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:portafolio/src/bloc/main_bloc.dart';
+import 'package:portafolio/src/ui/pages/about.dart';
 import 'package:portafolio/src/ui/widgets/drawer.dart';
 import 'package:portafolio/src/utils/values/responsive.dart';
 import 'package:portafolio/src/utils/values/theme_app.dart';
@@ -43,7 +44,7 @@ class MyPortfolio extends StatefulWidget {
 
 class _MyPortfolioState extends State<MyPortfolio> {
   int indexPage = 0;
-  List<Widget> pages = [Home()];
+  List<Widget> pages = [About()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

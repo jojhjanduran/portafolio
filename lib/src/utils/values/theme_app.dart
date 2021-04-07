@@ -25,7 +25,7 @@ class ThemeApp {
       bodyText1:
           TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
       bodyText2:
-          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText1),
+          TextStyle(color: _mainTextColor, fontSize: _responsiveApp.bodyText2),
     );
   }
 }

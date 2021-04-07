@@ -31,6 +31,7 @@ class Responsive {
   get headline3 => setFontSize(20);
   get headline4 => setFontSize(15);
   get bodyText1 => setFontSize(12);
+  get bodyText2 => setFontSize(18);
 
   //profileImage
   get containerWidth => setWidth(200);
